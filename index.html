@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Cricket</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: xx-large;
+            background-color: rgb(238, 253, 253);
+            margin-right: 14px;
+        }
+        .button{
+            width: 140px;
+            height: 61px;
+            margin-right: 1%;
+            font-size: xx-large;
+            border-radius:30px;
+            background-color: rgb(42, 128, 128);
+            max-width:245px;
+            width:100%
+        }
+    </style>
+    <script src="cricket.js"></script>
+</head>
+<body>
+<h1>Bat Ball Stump</h1>
+
+<button class="button" onclick="
+
+ let computerChoice = ComputerChoice();
+ let userChoice = 'Bat';
+ let resultMsg = resultmsg(userChoice,computerChoice);
+ showAll(userChoice,computerChoice,resultMsg);
+">Bat
+</button>
+
+<button class="button" onclick="
+ computerChoice = ComputerChoice();
+ userChoice = 'Ball';
+ resultMsg = resultmsg(userChoice,computerChoice);
+ showAll(userChoice,computerChoice,resultMsg);
+">Ball
+</button>
+
+<button class="button" onclick="
+ computerChoice = ComputerChoice();
+ userChoice = 'Stump';
+ resultMsg = resultmsg(userChoice,computerChoice);
+ showAll(userChoice,computerChoice,resultMsg);
+">Stump
+</button>  
+<button onclick="localStorage.clear()
+    resetScore();
+    ">Clear</button> 
+    <h3 id="User_move"></h3>
+    <h3 id="Computer_move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="Score"></h3>   
+</body>
+</html>
